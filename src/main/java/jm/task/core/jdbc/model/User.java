@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @Column (name = "name")
@@ -62,6 +63,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "user id: " + id + ", name: " + name + ", lastName: " + lastName + ", age: " + age;
+        return "user id = " + id + "; name = " + name + "; lastName = " + lastName + "; age = " + age;
     }
 }
